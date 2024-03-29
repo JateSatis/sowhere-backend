@@ -6,6 +6,7 @@ import { auth } from "../auth/authMiddleware";
 
 const router = Router();
 
+
 router.post("/api/register", async (req, res) => {
   const { firstName, lastName, password, email } = req.body;
 

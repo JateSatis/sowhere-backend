@@ -8,6 +8,11 @@ const pathToPrivateKey = path.join(__dirname, "/private_key.pem");
 const PRIV_KEY = fs.readFileSync(pathToPrivateKey);
 
 //# Создает JWT токен на основе приватного ключа и полученного клиента
+/**
+ * Creates and signs a JWT token using user id
+ * @param user User object that should contain "id" property
+ * @returns signed token
+ */
 const issueJWT = (user: User) => {
   const id = user.id;
 
